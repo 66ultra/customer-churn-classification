@@ -107,21 +107,22 @@ To use the saved models, you can load them from the `models` folder.
 ## Repository Structure
 
 The following is a breakdown of the files and directories included in this repository:
-├── README.md                <- The top-level README for reviewers of this project
-├── data/
-│   ├── preprocessed_data.pkl <- Preprocessed data file used for model training
-│   └── raw_data.csv          <- Original raw dataset (sourced externally)
-├── figures/
-│   ├── feature_importance_optimal_decision_tree.png <- Visualization of feature importance
-│   ├── confusion_matrix_optimal_decision_tree.png   <- Confusion matrix of the optimal model
-│   └── comparison_logreg_dtree.png                  <- Comparison of Logistic Regression and Decision Tree models
-├── models/
-│   ├── logistic_regression_model.pkl    <- Saved Logistic Regression model
-│   ├── optimized_decision_tree.pkl      <- Saved optimized Decision Tree model
-│   └── smote_scaler.pkl                 <- Saved scaler and SMOTE transformations
-├── notebooks/
-│   ├── 01_eda.ipynb                    <- Jupyter Notebook for Exploratory Data Analysis
-│   ├── 02_preprocessing.ipynb          <- Jupyter Notebook for data cleaning and preprocessing
-│   └── 03_modeling_and_evaluation.ipynb<- Jupyter Notebook for model building and evaluation
-├── reports/
-│   └── DS_Project_Presentation.pdf     <- PDF version of project presentation
+
+├── `README.md`                    <- The top-level README for reviewers of this project  
+├── `data/`                         <- Folder containing the dataset used for model training  
+│   ├── `preprocessed_data.pkl`     <- Preprocessed data file used for model training  
+│   ├── `raw_data.csv`              <- Original raw dataset (sourced externally)  
+├── `figures/`                      <- Folder for visualizations  
+│   ├── `feature_importance_optimal_decision_tree.png`  <- Visualization of feature importance  
+│   ├── `confusion_matrix_optimal_decision_tree.png`    <- Confusion matrix of the optimal model  
+│   ├── `comparison_logreg_dtree.png`  <- Comparison of Logistic Regression and Decision Tree models  
+├── `models/`                       <- Folder for saved models  
+│   ├── `logistic_regression_model.pkl`  <- Saved Logistic Regression model  
+│   ├── `optimized_decision_tree_model.pkl`  <- Saved optimized Decision Tree model  
+│   ├── `smote_scaler.pkl`          <- Saved scaler and SMOTE transformations  
+├── `notebooks/`                    <- Jupyter Notebooks for analysis and modeling  
+│   ├── `01_eda.ipynb`              <- Jupyter Notebook for Exploratory Data Analysis  
+│   ├── `02_preprocessing.ipynb`    <- Jupyter Notebook for data cleaning and preprocessing  
+│   ├── `03_modeling_and_evaluation.ipynb`  <- Jupyter Notebook for model building and evaluation  
+├── `reports/`                      <- Folder for reports  
+│   ├── `DS_Project_Presentation.pdf`  <- PDF version of project presentation
