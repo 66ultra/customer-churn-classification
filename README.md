@@ -2,7 +2,7 @@
 
 Author: Noah Meakins
 
-![Opening Image](../customer-churn-classification/images/SyriaTel%20Project%20Photo.jpg)
+![Opening Image](images/SyriaTel_Project_Photo.jpg)
 
 ## Project Overview
 
