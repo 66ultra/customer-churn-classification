@@ -1,5 +1,7 @@
 # Customer Churn Prediction Project
 
+Author: Noah Meakins
+
 ## Project Overview
 
 This project aims to predict customer churn for a telecommunications company using machine learning models. The goal is to identify customers who are likely to churn and provide insights that can help the business take proactive measures.
@@ -54,19 +56,19 @@ Here are some key visualizations created during the project:
 
 This bar chart displays the most important features contributing to customer churn predictions in the Decision Tree model.
 
-![Feature Importance](../customer-churn-classification/figures/feature_importance_optimal_decision_tree.png)
+![Feature Importance](figures/feature_importance_optimal_decision_tree.png)
 
 ### 2. Confusion Matrix (Heatmap)
 
 This heatmap shows the confusion matrix of the optimal Decision Tree model, which provides insights into true positives, false positives, true negatives, and false negatives.
 
-![Confusion Matrix](../customer-churn-classification/figures/confusion_matrix_optimal_decision_tree.png)
+![Confusion Matrix](figures/confusion_matrix_optimal_decision_tree.png)
 
 ### 3. Model Comparison
 
 A bar chart comparing Logistic Regression and the optimized Decision Tree models in terms of Precision, Recall, and F1-Score.
 
-![Model Comparison](../customer-churn-classification/figures/comparison_logreg_dtree.png)
+![Model Comparison](figures/comparison_logreg_dtree.png)
 
 ## Saved Models
 
