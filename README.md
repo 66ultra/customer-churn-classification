@@ -2,15 +2,18 @@
 
 Author: Noah Meakins
 
+![Opening Image](../customer-churn-classification/images/SyriaTel%20Project%20Photo.jpg)
+
 ## Project Overview
 
-This project aims to predict customer churn for a telecommunications company using machine learning models. The goal is to identify customers who are likely to churn and provide insights that can help the business take proactive measures.
+This project aims to predict customer churn for SyriaTel using machine learning models. The goal is to identify customers who are likely to churn and provide insights that can help the business take proactive measures.
 
 The final model was built using a Decision Tree Classifier, with hyperparameter tuning applied to optimize performance. The project includes feature engineering, data preprocessing, model building, and evaluation, along with visualizations that provide actionable insights.
 
 ## Dataset
 
-- **Source**: The dataset was sourced from Kaggle. <https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset>
+- **Source**: The dataset was sourced from Kaggle.
+<https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset>
 
 - **Columns**: The dataset consists of various customer details such as:
   - Total day charge
@@ -53,7 +56,7 @@ The target variable is **churn**, which indicates whether a customer has churned
 
 #### Findings
 
-1. **Model Performance**: The final Decision Tree Classifier model performed well with an accuracy of 94%. The precision for predicting churn is 83%, while recall is 72%. This means the model is quite effective in identifying customers who are likely to churn.
+1. **Model Performance**: The final Decision Tree Classifier model performed well with an accuracy of 94%. The precision for predicting churn is 83%, while recall is 72%. This means the model is quite effective in identifying customers who are likely to churn while reducing false positives.
 
 2. **Feature Importance**: The most influential features in predicting customer churn were:
    - **Total Day Charge**: This feature was the most significant driver for customer churn.
@@ -68,7 +71,7 @@ The target variable is **churn**, which indicates whether a customer has churned
 
 1. **Use Case for Model Predictions**:
    - The model is well-suited for identifying **high-risk churners** based on key features such as `Total Day Charge` and `Customer Service Calls`. The predictions can help the business target customers for retention strategies, such as offering discounts or personalized plans.
-   - However, the model may underperform in situations where recall is critical. For example, in situations where it's more important to identify as many churners as possible (even at the expense of false positives), this model's recall might need to be improved.
+   - However, the model may under-perform in situations where recall is critical. For example, in situations where it's more important to identify as many churners as possible (even at the expense of false positives), this model's recall might need to be improved.
 
 2. **Business Actions**:
    - **Focus on Customer Service**: Since high customer service interactions correlate with churn, the company can focus on improving customer service or implementing proactive outreach programs to resolve customer issues before they become reasons for churn.
@@ -125,4 +128,4 @@ The following is a breakdown of the files and directories included in this repos
 │   ├── `02_preprocessing.ipynb`    <- Jupyter Notebook for data cleaning and preprocessing  
 │   ├── `03_modeling_and_evaluation.ipynb`  <- Jupyter Notebook for model building and evaluation  
 ├── `reports/`                      <- Folder for reports  
-│   ├── `DS_Project_Presentation.pdf`  <- PDF version of project presentation
+│   ├── `Customer Churn Prediction for SyriaTel.pdf`  <- PDF version of project presentation
