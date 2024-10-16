@@ -1,39 +1,73 @@
-# Customer Churn Prediction at SyriaTel
+# Customer Churn Prediction Project
 
 ## Project Overview
 
-This project aims to build a machine learning model to predict customer churn for SyriaTel, a telecommunications company. By identifying at-risk customers, the Customer Retention Team can take actions such as offering discounts or promotions to retain them.
+This project aims to predict customer churn for a telecommunications company using machine learning models. The goal is to identify customers who are likely to churn and provide insights that can help the business take proactive measures.
+
+The final model was built using a Decision Tree Classifier, with hyperparameter tuning applied to optimize performance. The project includes feature engineering, data preprocessing, model building, and evaluation, along with visualizations that provide actionable insights.
 
 ## Dataset
 
-The dataset used for this project is from [Kaggle: Churn in Telecoms Dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset), containing 3333 customer records and 19 features related to customer behavior and usage.
+- **Source**: The dataset was sourced from Kaggle.
+- **Columns**: The dataset consists of various customer details such as:
+  - Total day charge
+  - Customer service calls
+  - International plan
+  - Voice mail plan
+  - Many other telecommunication features
 
-## Stakeholders
+The target variable is **churn**, which indicates whether a customer has churned (True) or not (False).
 
-The primary stakeholders are the **Customer Retention Team** at SyriaTel, focusing on reducing churn and maintaining revenue.
+## Key Steps
 
-## Objective
+1. **Data Preprocessing**:
+   - Removed unnecessary features such as `state` and `phone_number`.
+   - Scaled the numeric features for better model performance.
+   - Addressed class imbalance using SMOTE.
 
-The objective of this project is to create a machine learning classifier to accurately predict whether a customer will churn, thus allowing the business to intervene proactively.
+2. **Model Building and Evaluation**:
+   - Tried Logistic Regression, Decision Tree, and tuned the Decision Tree for better performance.
+   - Used metrics such as Accuracy, Precision, Recall, and F1-Score to evaluate model performance.
+   - Applied hyperparameter tuning to find the optimal parameters for the Decision Tree.
 
-## Methods and Models
+3. **Visualizations**: Created visualizations to highlight feature importance, model comparisons, and the final results.
 
-The following steps were taken to complete the project:
+## Key Results
 
-- Data cleaning and preprocessing, including handling missing values, feature scaling, and encoding categorical variables.
-- Exploratory Data Analysis (EDA) to understand key patterns and correlations.
-- Baseline model with Logistic Regression.
-- Class balancing techniques like class-weight adjustments and SMOTE.
-- Hyperparameter tuning of a Decision Tree model, including max depth, min_samples_split, min_samples_leaf, and max_features.
-- Model evaluation based on accuracy, recall, and precision to optimize for identifying churners.
+- **Final Model**: The optimal model selected was the Decision Tree Classifier with hyperparameters:
+  - `max_depth=12`
+  - `min_samples_split=5`
+  - `min_samples_leaf=5`
+  - `max_features=14`
+  
+- **Model Performance**:
+  - Accuracy: 94%
+  - Precision for Churn Class: 83%
+  - Recall for Churn Class: 72%
+  - F1-Score for Churn Class: 77%
 
-## Results
+## Visualizations
 
-The final model achieved a **94% accuracy** and **69% recall** for the churn class. This balance allows the team to catch more at-risk customers while maintaining overall model performance.
+Here are some key visualizations created during the project:
 
-## Business Recommendations
+### 1. Feature Importance
 
-Based on the model, the **Customer Retention Team** can:
+This bar chart displays the most important features contributing to customer churn predictions in the Decision Tree model.
 
-- Focus retention efforts on customers predicted to churn, particularly those with frequent customer service interactions and high international plan usage.
-- Tailor promotions and discounts for at-risk customers to reduce churn rate.
+![Feature Importance](../customer-churn-classification/figures/feature_importance_optimal_decision_tree.png)
+
+### 2. Confusion Matrix (Heatmap)
+
+This heatmap shows the confusion matrix of the optimal Decision Tree model, which provides insights into true positives, false positives, true negatives, and false negatives.
+
+![Confusion Matrix](../customer-churn-classification/figures/confusion_matrix_optimal_decision_tree.png)
+
+### 3. Model Comparison
+
+A bar chart comparing Logistic Regression and the optimized Decision Tree models in terms of Precision, Recall, and F1-Score.
+
+![Model Comparison](../customer-churn-classification/figures/comparison_logreg_dtree.png)
+
+## Saved Models
+
+To use the saved models, you can load them from the `models` folder.
