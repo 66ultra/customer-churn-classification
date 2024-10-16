@@ -10,7 +10,8 @@ The final model was built using a Decision Tree Classifier, with hyperparameter 
 
 ## Dataset
 
-- **Source**: The dataset was sourced from Kaggle.
+- **Source**: The dataset was sourced from Kaggle. <https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset>
+
 - **Columns**: The dataset consists of various customer details such as:
   - Total day charge
   - Customer service calls
@@ -47,6 +48,35 @@ The target variable is **churn**, which indicates whether a customer has churned
   - Precision for Churn Class: 83%
   - Recall for Churn Class: 72%
   - F1-Score for Churn Class: 77%
+
+### Findings and Recommendations
+
+#### Findings
+
+1. **Model Performance**: The final Decision Tree Classifier model performed well with an accuracy of 94%. The precision for predicting churn is 83%, while recall is 72%. This means the model is quite effective in identifying customers who are likely to churn.
+
+2. **Feature Importance**: The most influential features in predicting customer churn were:
+   - **Total Day Charge**: This feature was the most significant driver for customer churn.
+   - **Customer Service Calls**: Customers who made frequent calls to customer service were more likely to churn.
+   - **International Plan**: Customers with an international plan had a higher likelihood of churning.
+
+   These insights allow us to understand which customer behaviors most strongly predict churn and provide guidance for targeted retention strategies.
+
+3. **Comparison of Models**: The optimized Decision Tree model outperformed Logistic Regression in terms of both precision and recall, particularly in reducing false positives for churn prediction. However, Logistic Regression had a higher recall (78%) in identifying churners but at the expense of more false positives.
+
+#### Recommendations
+
+1. **Use Case for Model Predictions**:
+   - The model is well-suited for identifying **high-risk churners** based on key features such as `Total Day Charge` and `Customer Service Calls`. The predictions can help the business target customers for retention strategies, such as offering discounts or personalized plans.
+   - However, the model may underperform in situations where recall is critical. For example, in situations where it's more important to identify as many churners as possible (even at the expense of false positives), this model's recall might need to be improved.
+
+2. **Business Actions**:
+   - **Focus on Customer Service**: Since high customer service interactions correlate with churn, the company can focus on improving customer service or implementing proactive outreach programs to resolve customer issues before they become reasons for churn.
+   - **Review International Plans**: Customers with international plans appear more likely to churn. The business could analyze if the current international plan offerings are not meeting customer expectations and could revise these plans or provide incentives to retain this segment.
+
+3. **Feature Optimization**:
+   - The business might experiment with adjusting `Total Day Charges` or providing tailored plans to customers with high charges to reduce churn risk.
+   - Additionally, if further improvement in recall is needed, adjusting the model’s threshold or using a more recall-optimized model could help capture more potential churners at the expense of some precision.
 
 ## Visualizations
 
