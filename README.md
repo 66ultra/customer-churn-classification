@@ -122,7 +122,8 @@ The following is a breakdown of the files and directories included in this repos
 ├── `models/`                       <- Folder for saved models  
 │   ├── `logistic_regression_model.pkl`  <- Saved Logistic Regression model  
 │   ├── `optimized_decision_tree_model.pkl`  <- Saved optimized Decision Tree model  
-│   ├── `smote_scaler.pkl`          <- Saved scaler and SMOTE transformations  
+│   ├── `smote_scaler.pkl`          <- Saved scaler and SMOTE transformations
+│   ├── `notebook.ipynb`            <- Final notebook
 ├── `notebooks/`                    <- Jupyter Notebooks for analysis and modeling  
 │   ├── `01_eda.ipynb`              <- Jupyter Notebook for Exploratory Data Analysis  
 │   ├── `02_preprocessing.ipynb`    <- Jupyter Notebook for data cleaning and preprocessing  
